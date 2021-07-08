@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "b85e989415136d92",
+    "type": "split",
+    "children": [
+      {
+        "id": "bae3d1b2f26dcd75",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "blog/new-beginnings/index.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "09da2fd11d610959",
+    "type": "split",
+    "children": [
+      {
+        "id": "4dd639d7dc825eef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "68d2ec08b0433637",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d85fe22ed0e9451c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f5b662e53020621a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f00254e37b38b54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2dd69b50f3100012",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/new-beginnings/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "bae3d1b2f26dcd75",
+  "lastOpenFiles": [
+    "blog/new-beginnings/index.md",
+    "blog/my-second-post/index.md",
+    "blog/hello-world/index.md",
+    "blog/hello-world/salty_egg.jpg"
+  ]
+}
