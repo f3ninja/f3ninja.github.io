@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[🥷's blog]]></title><description><![CDATA[Learning to think.]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 08 Jul 2021 02:18:12 GMT</lastBuildDate><item><title><![CDATA[Micro-Front (End) Day-1]]></title><description><![CDATA[Micro-front end là gì? Đặc tính nông sản: Module-federation hoặc là Non-module-federation Decentralized configuration Cross frameworks : No…]]></description><link>null/micro-frontend/</link><guid isPermaLink="false">null/micro-frontend/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;Micro-front end là gì?&lt;/h2&gt;
+&lt;p&gt;Đặc tính nông sản:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Module-federation hoặc là Non-module-federation&lt;/li&gt;
+&lt;li&gt;Decentralized configuration&lt;/li&gt;
+&lt;li&gt;Cross frameworks : No framework or technology stack is restricted.&lt;/li&gt;
+&lt;li&gt;Code splitting &amp;#x26; lazy loading : Support code splitting within the Fronts app as a module, it can be lazy loaded by other Fronts app as a dependent module.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Module in Nodejs]]></title><description><![CDATA[Export in Nodejs Default Export (export default) vs Named Export (export)]]></description><link>null/module-federation/</link><guid isPermaLink="false">null/module-federation/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;Export in Nodejs&lt;/h2&gt;
+&lt;p&gt;Default Export (export default) vs Named Export (export)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JS design pattern]]></title><description><![CDATA[Constructor Pattern Module Pattern  is also a new ES6 feature that seems to be a good option for creating private memebers. It accepts any…]]></description><link>null/my-second-post/</link><guid isPermaLink="false">null/my-second-post/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;Constructor Pattern&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;
+&lt;span class=&quot;token comment&quot;&gt;/*
+ * Constructor Pattern
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;opts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; opts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;year &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; opts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;year&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;miles &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; opts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;miles&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// Prototype method&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; has driven &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;miles&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; miles&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Usage:&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; civic &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  model&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Honda&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  year&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2001&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  miles&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// ES5 Example of constructor function&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; opts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token class-name&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;toString&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Module Pattern&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* lib/module.js */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; shoppingList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;WeakMap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Module Pattern
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AbstractDataType&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// woo! our Class is instantiated lets add some private properties.&lt;/span&gt;
+    shoppingList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;coffee&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chicken&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;pizza&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// Lets create a public prototype method to access our private `shoppingList`&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;getShoppingList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; shoppingList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;addItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    shoppingList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Now we export our `Class` which will become an importable module.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; AbstractDataType&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;WeakMap&lt;/code&gt; is also a new ES6 feature that seems to be a good option for creating private memebers. It accepts any value as a key and doesn’t prevent the key object from getting garbage collected when the &lt;code class=&quot;language-text&quot;&gt;WeakMap&lt;/code&gt; object still exists. It remove any entry containing the object once it’s garbage collected.&lt;/p&gt;
+&lt;h2&gt;Observer Pattern&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/*
+ * Observer Pattern
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; model &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;observe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// async callback&lt;/span&gt;
+  changes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;change&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;change&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;type&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; change&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; change&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;oldValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Another popular pattern that is being simplified in ES6/ES7 is the &lt;code class=&quot;language-text&quot;&gt;Observer Pattern&lt;/code&gt;. If you’re not familiar the &lt;code class=&quot;language-text&quot;&gt;Observer Pattern&lt;/code&gt; is a design pattern in which an object (known as the subject) maintains a list of objects depending on what it observes (observers), automatically notifying them of any changes to state. In ES5 this was a little cumbersome to setup but not difficult. You created a ObserverList constructor function which creates an empty list of observers. After that you create an interface of public prototype methods for tasks like adding, deleting, etc. Now it’s much more simple we have a handy dandy Object.observe method we can use to do the same job with a lot less code.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JavaScript Architecture Application]]></title><description><![CDATA[Single Page Applications(SPAs) It is sometimes referred to as Single Page Interface (SPI). This is the most common form of JavaScript…]]></description><link>null/new-beginnings/</link><guid isPermaLink="false">null/new-beginnings/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;Single Page Applications(SPAs)&lt;/h2&gt;
+&lt;p&gt;It is sometimes referred to as Single Page Interface (SPI). This is the most common form of JavaScript applications available these days. These are a lot more responsive and resemble a desktop application. Unlike other web applications, these load the complete webpage with HTML, CSS, and JavaScript initially. Though the initial loading of the webpage takes time, it works faster with other user requests. The only disadvantage these applications have is that they rely heavily on JavaScript and thus reduce browsing speed in low power devices. Some examples of SPAs are Gmail, Facebook, Twitter, etc.&lt;/p&gt;
+&lt;h2&gt;Multi-page Applications&lt;/h2&gt;
+&lt;p&gt;These applications work in a “traditional” way. This means that every change in the web application requests a new page from the server. They are larger than SPAs and take more time than necessary. We have to transfer a lot of data between the server and the browser which reduces the application’s speed. Even though it is much easier these days to do that with the help of AJAX (Asynchronous JavaScript), it isn’t very popular. AJAX allows us to refresh only certain sections of the applications without reloading the complete application. But using these applications adds complexity for the programmer and these are difficult to develop as compared to the SPAs.&lt;/p&gt;
+&lt;h2&gt;Isomorphic (Universal) Applications&lt;/h2&gt;
+&lt;p&gt;JavaScript applications became ‘Isomorphic’ with the release of NodeJS i.e. they can execute on both client-side and server-side. These applications are very useful when you need faster interaction with the web pages. The same code must be compatible to execute on both the client-side and server-side to render the application components. Unlike SPAs, these applications support older devices and work even with poor internet connections. These applications have a lesser code, but this also makes them difficult to debug.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[System design interview]]></title><description><![CDATA[Chào mọi người mình đi phỏng vấn căng thẳng, 3 nhân vật chính sau đây: Databases Phần 1 👨‍🦳: Anh cho chú cái DB này chú phân tích xem…]]></description><link>null/system-design-101/</link><guid isPermaLink="false">null/system-design-101/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Chào mọi người mình đi phỏng vấn căng thẳng, 3 nhân vật chính sau đây:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 👨‍🦳: Bác Senior Solution
+- 👳‍♂️: Anh Senior Engineer
+- 👨‍🔧: Mình Dev đua đòi thích đủ thứ.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Databases&lt;/h2&gt;
+&lt;h3&gt;Phần 1&lt;/h3&gt;
+&lt;p&gt;👨‍🦳: Anh cho chú cái DB này chú phân tích xem?&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 401px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/94d8af5aab2cc3cb62f9895fed1d4dd0/9144d/system-design-db-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.316455696202528%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5klEQVQY012PwUrEMBRF+8m6cOXStYvxG0R0oS4cEIQKjuBCyGIgLUQSWhoTmEJbTTLzatrkDVOdhXO4q8c9cF8ymy/u3paj9+OeEAIAMMaklJxzrTUixhgR4xDwnl5fLc+0tYiYHD2Qixdqutat1845a23f92VZZlmGiMYYSikAWGt/YCOkPp5n5+/q9dPs5Nnlze3TM/5nGAbOeZqmhJC6rmOM3vsYxi+3OXnMTxclWbmdjBinHAIAVVU1TbPf/If8BtbCOB2SA/W313VdnudFUSilhBB2+jCEwIXgH2ylpOC8adst2lgTTRLviVQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Databases&quot;
+        title=&quot;Databases&quot;
+        src=&quot;/blog/static/94d8af5aab2cc3cb62f9895fed1d4dd0/9144d/system-design-db-1.png&quot;
+        srcset=&quot;/blog/static/94d8af5aab2cc3cb62f9895fed1d4dd0/c26ae/system-design-db-1.png 158w,
+/blog/static/94d8af5aab2cc3cb62f9895fed1d4dd0/6bdcf/system-design-db-1.png 315w,
+/blog/static/94d8af5aab2cc3cb62f9895fed1d4dd0/9144d/system-design-db-1.png 401w&quot;
+        sizes=&quot;(max-width: 401px) 100vw, 401px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Ok anh, có 3 thứ chúng ta cần phải đề cập ở đây:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thứ 1 cái DB của anh mà ngỏm tắt điện cả hệ thống rồi.&lt;/li&gt;
+&lt;li&gt;Thứ 2 cái Server App của anh mà nó crashed thì cũng tắt điện.&lt;/li&gt;
+&lt;li&gt;Thứ 3 theo lý thuyết anh có cái DB mà ko biết cái máy chứa nó I/O best cỡ nào mà cứ đè ra đọc ghi lia lịa. DB là một cô nàng xinh đẹp mà anh cứ i/o lia lịa thì em nó tắt thở mất thôi. Trước hết chúng ta phải thêm 1 DB nữa để backup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chúng ta sẽ dùng &lt;code class=&quot;language-text&quot;&gt;master-slave pattern&lt;/code&gt; để giải quyết vấn đề này&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 479px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/3a93d197c7dccab8b1cce82166956b16/a9b70/system-design-1-ms.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.34177215189873%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVQY05WQzUrEQBCE86TefQVvvoOCp/UFRBAC4kkU1h8iRDGLYRcx/iWZJGNvsjPZdnoyLRtUFsnF79CHpqqgyuP/4PrzJGDn8sCfXXsDCueGnt9m+7mMXsSm/7h39+E5g9x1f8y2Zz3FOWJumXnZaoXm6CG7yWpv//x2+i7YdcYYIrLWZlkmhEjTNM/z3raKHifB4WQESKppnpOkSt9QLbyN0fHp/YzJKK3btlVKRVEEAGVZxnGMiFprVc+3TyZbZ0nwKp1Bsh0asl3nja8uKinXqxJRGIZBECAiM9u+lD+tdsNcov2ZbcXAYABQFEVd1wBgjGHmhVJVIZo5gJRE9Kv8AvNPjMP0zqpUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Databases&quot;
+        title=&quot;Databases&quot;
+        src=&quot;/blog/static/3a93d197c7dccab8b1cce82166956b16/a9b70/system-design-1-ms.png&quot;
+        srcset=&quot;/blog/static/3a93d197c7dccab8b1cce82166956b16/c26ae/system-design-1-ms.png 158w,
+/blog/static/3a93d197c7dccab8b1cce82166956b16/6bdcf/system-design-1-ms.png 315w,
+/blog/static/3a93d197c7dccab8b1cce82166956b16/a9b70/system-design-1-ms.png 479w&quot;
+        sizes=&quot;(max-width: 479px) 100vw, 479px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Với cách này chúng ta sẽ đạt đc 3 tiêu chí &lt;code class=&quot;language-text&quot;&gt;system availability, protection against data loss, and performance gain&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ok! để cải thiện khi hệ thống scale lên đột thì &lt;code class=&quot;language-text&quot;&gt;Separate of concern&lt;/code&gt; là một ý tưởng ko tồi. Để một cái master làm WRITE rồi cho 2 con slave để READ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 487px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/7771224405ac9040d63f61d5db23a87e/7b439/system-design-2-ms.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.59493670886076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABiUlEQVQoz52SzYsUMRDF8x+LF49evXgUBEXEk18HL4J7GEd3QUVwlFFZZ5me7kwyu20y66Q7SSedzkdJd8OwqKzoO9XlV6/qVSH4F6WUAMBaMZs/acw5+isQQuCcd10HAHGAD3N8882DKSGXwTFGrbWUEuP1TtS6MVLpYNT9t8trU/b4RCBI8XfGe59S8t43TTNMCwAOoBsKwMLcfbcoKoOmX1aQYggxhAAASilCCGOsKApjjLUWACrrH83vHa1fxd6ob2CUTDGiWy8/eqOVbrTWzrksyyilfXuMy7JknBtZvV/Sqy+Wd+Ys35wWqxXG6+35jwSAvh4f72McRSmdTCaEkBACY/xsQ8926sZR9rwQrXOc891O1HUdU/o1sLZtGWPb7bYaZK0ZT7RYfCNrvLeRlYoxoouefSzO7UkhxLjzyMQY07Aw12y6uF3KU3T5haWUIYQ8zymlffjWgncPP2TXD2dPTxj64xuNAgDvvbsg2zoI3bNP+MpBdoBr9B/vuSm/v559djH9BKRhqv1KNdw3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Databases&quot;
+        title=&quot;Databases&quot;
+        src=&quot;/blog/static/7771224405ac9040d63f61d5db23a87e/7b439/system-design-2-ms.png&quot;
+        srcset=&quot;/blog/static/7771224405ac9040d63f61d5db23a87e/c26ae/system-design-2-ms.png 158w,
+/blog/static/7771224405ac9040d63f61d5db23a87e/6bdcf/system-design-2-ms.png 315w,
+/blog/static/7771224405ac9040d63f61d5db23a87e/7b439/system-design-2-ms.png 487w&quot;
+        sizes=&quot;(max-width: 487px) 100vw, 487px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;👨‍🦳: Vậy lỡ con Master tạch luôn thì sao?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Mà để chắc ăn trong trường hợp wrong Query, file system isse ở production thì nên có 2 con master chạy song song và các hệ thống vệ tinh slave chạy cheo nó. &lt;code class=&quot;language-text&quot;&gt;Backup of backup&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Thì khuyết điểm của trò này: là dữ liệu nó sẽ có một độ trễ nhất định khi gặp sự cố. Nhưng đảm bảo được tính liên tục và bảo toàn. Giống như Linkekin đôi khi ghi vẹo vào rồi, mà F5 nó ko lên cái update. Kiểu vậy, nhưng ở nhưng bài toán chấp nhận lag kiểu này vẫn ok.&lt;/p&gt;
+&lt;p&gt;👨‍🦳: … Bác hỏi hỏi …?&lt;/p&gt;
+&lt;p&gt;👳‍♂️: … làm sao code cái này, làm sao code cái kia, khi xài Nodejs xài thư viện gì… 🥶&lt;/p&gt;
+&lt;p&gt;👨‍🔧: … mình bí khá nhiều 😂&lt;/p&gt;
+&lt;h3&gt;Phần 2&lt;/h3&gt;
+&lt;p&gt;👨‍🦳: Bây giờ giả sử một table có 10k nhân viên, hay 10k người mua hàng và mỗi row có nhiều columns, thế theo chú thì điều này có vấn đề gì không?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: …một table mà nhiều row thì giống như một cái từ điển có nhiều trang tùm lum tè le vậy, trước hết để giải quyết vấn đề tìm hiệu quả thì phải &lt;code class=&quot;language-text&quot;&gt;index&lt;/code&gt;. Trong ngày đẹp trời doanh nghiệp yêu cầu user cập nhật CMND để lấy Voucher trong vòng một ngày chẳng hạn điều này làm hệ thống sẽ quá tải khi xử lý 10k người. Để ghi được vào 1 row. Trước hết là tìm và sau đó là ghi. &lt;code class=&quot;language-text&quot;&gt;TÌM&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;GHI&lt;/code&gt;. Một table mà nhiều column thì mỗi lần tìm Operation này sẽ pull 1 đống dữ liệu không cần thiết. Nó làm hao phí &lt;code class=&quot;language-text&quot;&gt;CPU, IO, NETWORK&lt;/code&gt;. Trước hết là phải làm sao cắt cái table đó ra cho hiệu quả trước.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; Horizontal partitioning&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Nhìn vô bản chất &lt;code class=&quot;language-text&quot;&gt;Employee&lt;/code&gt; hay &lt;code class=&quot;language-text&quot;&gt;Customer&lt;/code&gt; thì tạm chia đại theo Vùng &lt;code class=&quot;language-text&quot;&gt;Employee.country&lt;/code&gt; as &lt;code class=&quot;language-text&quot;&gt;China&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Vietnam&lt;/code&gt;… Khi chia nhỏ ra để trị thì size bài toán đã nhỏ hơn. Bây giờ sẽ đẩy về từng cluster để chia nhỏ bài toán I/O.&lt;/li&gt;
+&lt;li&gt;Tổng số I/O 1 chỗ bằng M thì khi chia ra M/n. Chiến thuật chia càng hiệu quả thì càng đỡ chi phí.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 335px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/b45f5666e52878071df0259afab7d68f/c0051/system-design-hp.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.72151898734178%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZklEQVQoz22SWW+jMBSF+f//ZkZ96ZJJk7AHEraEJdMCxrFNwexbqgZGoa3Uh/l0H66vdKxzfM1MP+i6DgAAZ4IgiKIIfgMACMMQ/iAMQ+Y6M47jNE11XUMIKaVZlvm+TwihlKZpSinFGAdBkGVZkiTpjG3bjKqqmqaZppkkCaWUEFJV1e2WKKKUVlVVlmVVVWmSnCGs67ooirIsi6K4id9nhmEYx7Gq6+iMaJ5nReGHIXl7o3meZhnNcxzHAQBZUSSUplmWUGqfTsxX3Nl2n+fpXu08p/ccrCrlwew8p3XtznNyyyA7pT+5jXPsPKc6mGS/Y/q+H4bhMgwf03RB52rx2ApcL3Dk8b7crDqBa3m2E7hi/Rw/PfQi33Bsy9+K3v26ZdZ13TJNiEnpv1bLRSNwncChx/tis2oFruHZVuCy9TN+euhEvubZZq63u9/M+Mn1Ok3TJSbFetmqcq/KePWnlPhOlVtF6lQ5FzmyXva7bbMVW0VqZIE+PXxlHqdb5rLN9qeNFShHoEjWs/ZXPISKFWwPobI/CZK1OgLV8mUrVIwX0XwRGIwxQihJk6ZqcHHeRqKBdJPovMepQDGwriPNwLoSbnmPM4mhnfc60nSkrV8XjGVZruvatp0mKcqgOostYvAuuwOKiXUDaSbW1XAreJxFDP28N5BmoD37svi2Pa8qbd4Ef7OL5B2UN85S8nkVSAqQ1EgWXznWXalQVkJxnkg38effvM4P9v5xQSWEJcD1OW5x3OC4xbd+blAF4xaTBsUNhgVIm4SZ/od9tCVB5Dme3bCyJFumtVlvePbr6Drup9l/Ax3lPksHinsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Databases&quot;
+        title=&quot;Databases&quot;
+        src=&quot;/blog/static/b45f5666e52878071df0259afab7d68f/c0051/system-design-hp.png&quot;
+        srcset=&quot;/blog/static/b45f5666e52878071df0259afab7d68f/c26ae/system-design-hp.png 158w,
+/blog/static/b45f5666e52878071df0259afab7d68f/6bdcf/system-design-hp.png 315w,
+/blog/static/b45f5666e52878071df0259afab7d68f/c0051/system-design-hp.png 335w&quot;
+        sizes=&quot;(max-width: 335px) 100vw, 335px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; Vertical partitioning&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Do table có nhiều column và có những column hay thay đổi, và có nhiều column rất ít thay đổi với chiến thuật này thì chia ra 2 bảng dành cho &lt;code class=&quot;language-text&quot;&gt;Employee[id,org,salary]&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Employee[id,picture]&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Employee[id,name,email]&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Partitioning improves your database availability and performance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👨‍🦳: Thế cậu có biết gì về sharding ko?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: …lục lọi trong ký ức, dkm mình dạo này code frontend nhiều quá lú rồi. Em không nhớ mà theo lý thuyết &lt;code class=&quot;language-text&quot;&gt;sharding&lt;/code&gt; nó là bản nâng cấp của &lt;code class=&quot;language-text&quot;&gt;horizontal partitioning&lt;/code&gt;. Sharding sẽ store dữ liệu ở nơi vẹo nào cũng đc, không nhất thiết phải cũng &lt;code class=&quot;language-text&quot;&gt;server&lt;/code&gt;. Nó chia data ra nhiều server khác nhau và tạo ra nhiều &lt;code class=&quot;language-text&quot;&gt;overhead&lt;/code&gt; hơn.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Algorithmic sharding, Dynamic sharding&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;👨‍🔧: Em cũng không rành cái này lắm 😂&lt;/p&gt;
+&lt;h2&gt;Performnace&lt;/h2&gt;
+&lt;h3&gt;Phần 3&lt;/h3&gt;
+&lt;p&gt;👨‍🦳: Ok, no worry! (bác cúi xuống ghi ghi cái gì đó). Ok! i’m done. Ravik please!&lt;/p&gt;
+&lt;p&gt;👳‍♂️: Ok, Khan i have question for you 🗣. Bạn có xài caching framework gì không?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Caching? Framework? 🙄🙄😶😶😶😑&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Ok, trước hết chúng ta sẽ nói tại sao caching. Thì tạm chia làm 2 loại không gian và thời gian. Các yếu tố ảnh hưởng đến thời gian có thể hiểu là &lt;code class=&quot;language-text&quot;&gt;Tốc độ IO, Tốc độ xử lý thuật toán, Tốc độ mạng, Tốc độ encrypt, tốc độ decrypt ..&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Nói chung tạm gọi T là tổng hợp các operations có thể ảnh hưởng đến biến số thời gian để từ khi yêu cầu và xử lý được chấp thuận. Nếu một hệ thống mà không có cache về mặt cơ bản là ăn &lt;code class=&quot;language-text&quot;&gt;shit&lt;/code&gt;. Mà cache ở đâu thì lại tùy. Thường thì em dùm &lt;code class=&quot;language-text&quot;&gt;Redis&lt;/code&gt; và cache trên &lt;code class=&quot;language-text&quot;&gt;RAM&lt;/code&gt;. Em cũng muốn cache trên &lt;code class=&quot;language-text&quot;&gt;CPU,L1,L2&lt;/code&gt; mà méo biết làm. Túm lại cache trên &lt;code class=&quot;language-text&quot;&gt;RAM&lt;/code&gt; vì &lt;code class=&quot;language-text&quot;&gt;IO&lt;/code&gt; của &lt;code class=&quot;language-text&quot;&gt;RAM&lt;/code&gt; nhanh hơn &lt;code class=&quot;language-text&quot;&gt;IO&lt;/code&gt; của &lt;code class=&quot;language-text&quot;&gt;Disk&lt;/code&gt;. Còn trade-off là solution này ngốn &lt;code class=&quot;language-text&quot;&gt;RAM&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 325px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/1e673ec2518bdf815397466b19f342a4/ff46a/caching.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 111.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAACh0lEQVQ4y41Ty04TURg+G+MTuPFFiI+ALmShC/UJVIS6IHGpMTEBVKAJgaghukFECaTItTQa5eJIKkqh7bSdtpBOR9Kp087MuU1nzjHTytjUDvKtTv5zvv/y/d8B/cvbt15/uvliIRCKftiJc84dxrgPWP0qXTp6szOwfSiA3rB0fXTiduDypdnU0o7IbQsT6gdCLUbhQFjqGIneey+B3rdb4+FIJBTs7J9c+Z6yoFHVDT/ohokq6nA4fSEYf7QmA+ngcGFpdXhkfFP4+quq8xPRmMcg9mZeV3QK7Fotn8sl4vsVTWuZzW9s7xZ4J3Yslaqq6XQ6kUgoiiLLciqVkiRJlmVFUURRLBQKnHPbcXnAlbcOL0utVoMQmqZpWRalFGOMECKEYIwhhJRSrwvAmsBPDcYdxhk46YUL+1im5rgbctsm0LQJcmxCDN2i5F9V/mVybjGWYUwDQ5EfgRmh+2W4bzn2OZaqO+zPUgyTaIezDlW9NTUUjaTlu3NPJ6MC6FnN3Bid6A50XZxJhoSYQxDCWNM0hHA2mymJY7lchhCKEIQQIkywXn4wL3YEM33zBdD77stYeC0SGu4cnFqMxhvkarW6t7cvCEIul1PVckNwhJAJkUPM6Wix8/n+sy0FiNn8XGhx8HHw4/qGphueQyzLqlQqCOG2nrFsVxTAHFspytmsBE2zxWGNbbeQGWONyV21mx3WUgFBiCH017ydw7xSZU0r1w3vtzbgl5aW1IOp6W/3H5qS9LfWf8nMtjnnu0+Gps+df3Xm7MadHi94CrLjcM5Lu7GVq9eWu64U1ze84CnabsrSltOe3BCmVCq5/zkeVxSlKBdTovjz6CifzyeTSYxxM/k3h/3IpSerH6YAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Cache&quot;
+        title=&quot;Cache&quot;
+        src=&quot;/blog/static/1e673ec2518bdf815397466b19f342a4/ff46a/caching.png&quot;
+        srcset=&quot;/blog/static/1e673ec2518bdf815397466b19f342a4/c26ae/caching.png 158w,
+/blog/static/1e673ec2518bdf815397466b19f342a4/6bdcf/caching.png 315w,
+/blog/static/1e673ec2518bdf815397466b19f342a4/ff46a/caching.png 325w&quot;
+        sizes=&quot;(max-width: 325px) 100vw, 325px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;👳‍♂️: Vậy bạn xài Redis à, bạn có thể nói tôi là bạn khai báo như thế nào trong Nodejs ko?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: (Lúc này hơi hoảng) 🤕 móa chả nhớ. Em mới xài nó với PHP chưa code nodejs bao giờ&lt;/p&gt;
+&lt;p&gt;👳‍♂️: Bạn nói 3 năm kinh nghiệm Nodejs mà chưa xài Redis với Node bao giờ à? 🤬&lt;/p&gt;
+&lt;p&gt;👨‍🔧: …😫&lt;/p&gt;
+&lt;p&gt;👨‍🦳: Ok, no worry! Thế bên PHP mày xài cái gì cũng Redis à?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Đúng rồi anh, cũng redis mà em xài Framwork, nó đc config sẵn.&lt;/p&gt;
+&lt;p&gt;👨‍🦳: Ok! vậy nó xài thế nào?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Vắt não, thực sự PHP cũng méo nhớ làm sao lại lôi lý thuyết ra chém tiếp&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Nói về &lt;code class=&quot;language-text&quot;&gt;caching&lt;/code&gt; thì chủ yếu là bàn về &lt;code class=&quot;language-text&quot;&gt;stragegy&lt;/code&gt; thường là ở phía &lt;code class=&quot;language-text&quot;&gt;backend&lt;/code&gt; toàn là mấy cục data và chi phí ghi i/o trên disk nó cao hơn. Nên những thứ cần tối ưu I/O thay vì nhào vô server lụm lụm lụm. Thì cache bố đâu đó gần nhà gọi cho lẹ. Ý em nói gần nhà là &lt;code class=&quot;language-text&quot;&gt;CDN&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;👨‍🦳: Khoan mày nói là &lt;code class=&quot;language-text&quot;&gt;strategy&lt;/code&gt; ý mày là sao, mày xài strategy gì rồi?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Chém cái vẹo gì cũng không nhớ nữa …&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First in first out, Least recently used, Least frequently used&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;👨‍🔧: Trong các chiến thuật về cache thì &lt;code class=&quot;language-text&quot;&gt;caching level&lt;/code&gt;. Như mấy cái &lt;code class=&quot;language-text&quot;&gt;HTML&lt;/code&gt; kiểu &lt;code class=&quot;language-text&quot;&gt;Skeleton&lt;/code&gt; ít thay đổi, hay mấy cái JSON config em cache bố nó ở client cho lẹ. Còn mấy cái static thì dùng &lt;code class=&quot;language-text&quot;&gt;cdn&lt;/code&gt; cho gần nhà user giảm tải thời gian package traveling. Với mấy cái web nặng nhất là cái hình. Để gần nhà user là win 80%. Còn PHP dự án trước em làm đa số là cache ở Server cái dự án do nó đưa logic về phía DB xử lý nhiều và chi phí tốn nên PHP có có sẵn cơ chế cache cái file đó. Em cũng không đi sâu vào.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;client cache, cdn cache, server cache.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;👳‍♂️: Gì cache ở phía &lt;code class=&quot;language-text&quot;&gt;Server&lt;/code&gt; à, vậy mốt muốn &lt;code class=&quot;language-text&quot;&gt;scale&lt;/code&gt; lên &lt;code class=&quot;language-text&quot;&gt;3,4 node&lt;/code&gt; thì sao?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Vâng cái này, nó bị issue là &lt;code class=&quot;language-text&quot;&gt;server&lt;/code&gt; nó &lt;code class=&quot;language-text&quot;&gt;statefull&lt;/code&gt; mịa nó rồi, scale lên 3,4 node chắc ăn shit quá? Mà thực ra nếu con &lt;code class=&quot;language-text&quot;&gt;load balancer&lt;/code&gt; nó tự điều hướng theo user request có điều kiện thì cũng ổn. Còn chơi &lt;code class=&quot;language-text&quot;&gt;RoundRobin&lt;/code&gt; thì chắc cache nó bị  &lt;code class=&quot;language-text&quot;&gt;cache miss problems&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;👳‍♂️: Thế sao không đặt một con Node làm Cache chung cho hết?&lt;/p&gt;
+&lt;p&gt;👨‍🔧: Vâng cái này, cũng vã lắm tụi em chạy feature thấy mẹ time đâu mà tái cấu trúc lại. Với đặt một con cache chung thì lại lòi ra &lt;code class=&quot;language-text&quot;&gt;Single point of Dead&lt;/code&gt; con cache có thể bị &lt;code class=&quot;language-text&quot;&gt;bottleneck&lt;/code&gt; bị &lt;code class=&quot;language-text&quot;&gt;die&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;👳‍♂️: … 😣&lt;/p&gt;
+&lt;p&gt;👨‍🔧: cách tiếp cận về caching thì có 3 kiểu:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cache-aside pattern: &lt;a href=&quot;https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/&quot;&gt;https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/c6a2425e60d48e817d76a0be14bf785d/5e3a3/cache-aside.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.16455696202532%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8UlEQVQoz3WQXUhTcRjGn7OVYel0c+qc9CWlc4cYZYvCxMoiaSBUF3UhK7G51i5CTXckA49BwbLm6MPt6Nx0mjP6MJIII9OKoIu6CSQt3NGd2ULRFIPU6T+mXuYLP5736sfzvgCQAUADYBuA3QBorI790BeqVT2PsyDw6X/K7CB4UuPHo8sBeA9NYq2hlhGBQoqIggyUlFXg5tUO6gU7gK6i2egm+dxjbmN42pX6t8YGgjoQam2heDWVFMSlMUAuIPUoAQJEGrmyxs85KEIaQIgzapF0Fo+lPjw1Dm/eJPVf34YqCaK7kyFpVohErrjNcCBJ3Byfur89R6V+t1nFFX3UuqVzE5yYkCbZQk8/6RS/HOqF9/Ak1IywgiUAtUVYBsQB8bxTJCZloHTbAbavLMbaX6G403sljpBnIFOlkvYz3bnX0vpNZQU2JZv1GuyuN1TXwSloKnjQERETENGrRISYdwKEAUq+dkma+6pk/kc+UU8Hi+95RxRDJ05mPQNk96VIskcjNnLVp/P7qBlXI0INDgQdHFSWIGhmpSUWvWmXllqUpl8+jfX34z3aYV8hRp1dGPU4o8Y9LUqhyISB6mx01AEfzDoIhksQrtdi1s2BtDGovvEemRbBQDOBV2qLcBtLXBRZckQ+DhJ2q+767CRqorFuZ8hu3/3j9On0wWPHMoYKCtK/6XQZg/n5qsGjR9Wj5eUpodY2GX+fkxMvK9EwI061ReBpJvAWhFu3SBxYiAjn3bvu+h+MbplwWtNCNlsMbzIl8CUlibzRKB8xm+WRHNbrk4MsGz/m8sQGG5wS4rodo6kKsGom+JRmhCaEXfEzYS56Jty4iSx406sWm9fj2z2CkM0G/uJF+A0G8EYjRszm5RzW6xFkWfzxcCAdDJjrfcis5IvoSr6FruRrccuo3W817s22lmhzntcekHorjuPzLQsVqq8HbzLBX1y8Io3sBgOGCwsRrKnBtLsJdRcMFBLl0CqQsEdD78jaKk7+BznWUcmflisoAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;cache-aside&quot;
+        title=&quot;cache-aside&quot;
+        src=&quot;/blog/static/c6a2425e60d48e817d76a0be14bf785d/f058b/cache-aside.png&quot;
+        srcset=&quot;/blog/static/c6a2425e60d48e817d76a0be14bf785d/c26ae/cache-aside.png 158w,
+/blog/static/c6a2425e60d48e817d76a0be14bf785d/6bdcf/cache-aside.png 315w,
+/blog/static/c6a2425e60d48e817d76a0be14bf785d/f058b/cache-aside.png 630w,
+/blog/static/c6a2425e60d48e817d76a0be14bf785d/5e3a3/cache-aside.png 763w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;read-through pattern:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/6f6b76685ece0e223e0e8bc719473b2b/5e3a3/read-through.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB40lEQVQY0x2OT0iTcRyHP+/mRvG6ZdNI3gjCktr7ptOJS4QgDx3KYtFElGQJxho71EHy91ulkhFURIQW0y3/vKDkn7Kxkdnq5LpEEQjRsQ7v66VshxWUzvf9xvzAw3N4Lh8AqAIgAXAUbbXAAyv2oLhWCEP+rLD0KwPVm0da/YJnjZpAw8BGsAMvIneBAYLCNMhch8x0gFL1tTRb5aGFQ1561bBvMAzgqhPCdAXwEbgZyGCZklbVm69Zer5qn/N9B91z4u/FTmTDUeAxCQrTAjLXmcz0ZhgTLsOM2wwzbidzqvIp3QAOx4RyMS7twiQcbTOR0nFX4eWY3aDE7kJmOZwt+xk6LX7qiToo6Cu90Lsiubm+qjAtLzNtHmZi55YZwybFQH9UabEit1XWtXi8unOhvbppzSk96lk5FbdQMdOYxaS3bZ8jvx92N35jt1py0d6W+aFpn5uvjShMUxWm9cOcdBEl7NsYU5UTuTsAiIAM0DTqx/oslSTKN1Lx7Yeb72ZC6yLOEVJdoyUYJxzgP0SF609kridlrvfhzWDN2SR3t6evH+n4cL9OTodtCPXvEJAGus8PW0YavuIKvyb21c35A2eC+28ffY9WW0H4d/kBXjc7MACg/tiJg56Tl2q9HmXvf0MAyKK2raAxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;read-through&quot;
+        title=&quot;read-through&quot;
+        src=&quot;/blog/static/6f6b76685ece0e223e0e8bc719473b2b/f058b/read-through.png&quot;
+        srcset=&quot;/blog/static/6f6b76685ece0e223e0e8bc719473b2b/c26ae/read-through.png 158w,
+/blog/static/6f6b76685ece0e223e0e8bc719473b2b/6bdcf/read-through.png 315w,
+/blog/static/6f6b76685ece0e223e0e8bc719473b2b/f058b/read-through.png 630w,
+/blog/static/6f6b76685ece0e223e0e8bc719473b2b/5e3a3/read-through.png 763w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;write-through pattern:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/5e3a3/write-through.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2ElEQVQY0y2QTWjTcByG33Q0YDtw/aAdTieyauc/tsmSrd1CqaLoEDYU58dOnhTxUNxBlyiMIQ4F8QPEsdmGtcMhtBdrFbbJDsKY4kEZCsOLB030rGGnzOQnFV94eM7PCwA7ALQDaAXQ0eKDBHAx/N/T3G/ujb2KednG8/InPBQ3OKhAtjsBcfAymG6BaSaEf7YAavSkqdolUjWh0KLSoQ0FgZCAjKJibYCwkLOxRist87Kdqtc+8vfEdSALZNg+SPmTYPpPH9PMEaZbGtMsFe5c2PWKftcr8uRW4gYRcDq/s03tzW0nIiw1vviNiPPiCe+SEdpavnWuFo4nA8FsZjDUF0VA0L5FmG59ZpppM82swStt++PNwKFZ0OZs2wLwIHy4P5lQlfxeyAhcV6vDj/2bNI0teuT/RTf7Xo+iF7EB5UhSYZ2d0vHCAeHa1xmm/6gwzZyAVw4TlXjymlTa575rzecI2AMYE6t49WyDNyJOo8i7VAo5K4sFJ3jp2BQQBdKnpprJrUy3pplu1ZlujWN5MjVc1/effXmje/T9XYktjXGYPBPlpIMx3JHfcvf7P6CgXw2OS9UTI0Pnd91OvcMVoezbLQcgjK3jIoCe7KEu8eiFtCwK8b8vsrMKWavRIAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;write-through&quot;
+        title=&quot;write-through&quot;
+        src=&quot;/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/f058b/write-through.png&quot;
+        srcset=&quot;/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/c26ae/write-through.png 158w,
+/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/6bdcf/write-through.png 315w,
+/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/f058b/write-through.png 630w,
+/blog/static/e9becdf51ce8828e9cd89bb5a6aae481/5e3a3/write-through.png 763w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;👨‍🔧: với caching ta sẽ improve được application perfomance, giảm thiểu chi phí I/O ở database, giảm i/O ở backend application,&lt;/p&gt;
+&lt;p&gt;👳‍♂️: …&lt;/p&gt;
+&lt;p&gt;👨‍🦳: …&lt;/p&gt;
+&lt;h3&gt;Phần 4: Consistent Hashing&lt;/h3&gt;
+&lt;h3&gt;Phần 5: Thiết kế một ứng dụng&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[💎 TS Design Pattern]]></title><description><![CDATA[Creational Patterns Singleton Patterns  The Singleton pattern solves two problems at the same time, violating the Single Responsibility…]]></description><link>null/ts-design-pattern/</link><guid isPermaLink="false">null/ts-design-pattern/</guid><pubDate>Mon, 06 Jul 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2&gt;Creational Patterns&lt;/h2&gt;
+&lt;h3&gt;Singleton Patterns&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/0f1b1d5d1abfc8966400a143abebab6a/0a47e/singleton-comic-1-en.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJUlEQVQozzWRyW8bZQDFP6l/AQfECaFAFyxFbRQhVQTEoRLiUKmtkJC4lDNw4ICKBEIsUtISSE1MmnTi8cx4vCSZxLFju65jO27GHntsz5JZPB7b8XiLPSFdnIRUoDZxmw8FiSe9y+/wfocHClzhi3Kl7FdU1V3UNG9JL3lrtU1vvWH4jHrN32w2QoIoTCJ2dGTid9vrP4/ePO/A8U+C4fDXgZXgVzPI7OXvfvjxnB3D33QQxDBQi6rfqBtwZ2fnv1Y3N2G9YcBWu/lnu93STbPTrFYr239M37WsxmLXVFXR2u3mPxuy0Fc1+ajZajwVRIGOxmLvoDhxBvAC7+52u7BULj9XisV+u73V58TC8W2b9aMUk8HpVGqZzbGBeYq6kc1nYLNVh/v7u5DlGKiVFbi/twv1ShEybLo3NX33EtD1kre324OdbrdfM2rHHXMLigp36PJ6vucFYV+SZZjNsdw8RU0l6QSs1at7ptmp0Zkkw4n5nGl2W7Iq/s2wqaMZxH4dVKoV94nx8eOHfSabfrmhcieD0Okir0Zj8YloLHafzeVCD9bXbWyehZFoJEAtLo1gBPGG1WYbcLrclxPJhCwrUn9xyfcpMIyar9vtwJKuH6Yzacjk6BcbKg+pJerK8or/ymo89jkvCovrKRoVZQ4a9U2olYrP4msJRZI3qqbZeaHpKtR05XCBWvwMpJn0t5Is90/OiKxGeqJSgLyUhwhqH3pA06DA5V5NpdOeUPjeN3kheyRKPGQLmYOZWSS/lkzuPD3461ivajBbYJ6gGHEJjN765e1AMOTjBVFwz7utLMf0wtHgVQhfgtV4/FQgFAIY4RwZn7BagpHgjXgyARmWhmPjt75cSybt29smLPA5xh/2vWu13TkN3N65s0v+ZUs4EvkVI7EPbdO219zzLvB/fhodA6THe3GOos4hs45hnHQyofsraLkhnZJk6ZVw5N7Ao54JxsZvApfHex7YMfzC3MLCRRTH30Mx4i3cSZ7FSXIIxfFBB04MojhhcRDODzAn+f40ggxPTk19/NvtyTMnHEEdlplZ+2nC5RokPZ4Ldgwf+hcUxiqh7N36YwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;singleton-comic-1-en&quot;
+        title=&quot;singleton-comic-1-en&quot;
+        src=&quot;/blog/static/0f1b1d5d1abfc8966400a143abebab6a/0a47e/singleton-comic-1-en.png&quot;
+        srcset=&quot;/blog/static/0f1b1d5d1abfc8966400a143abebab6a/c26ae/singleton-comic-1-en.png 158w,
+/blog/static/0f1b1d5d1abfc8966400a143abebab6a/6bdcf/singleton-comic-1-en.png 315w,
+/blog/static/0f1b1d5d1abfc8966400a143abebab6a/0a47e/singleton-comic-1-en.png 600w&quot;
+        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The Singleton pattern solves two problems at the same time, violating the Single Responsibility Principle:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ensure that a class has just a single instance.&lt;/li&gt;
+&lt;li&gt;Provide a global access point to that instance.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Solution
+All implementations of the Singleton have these two steps in common:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Make the default constructor private, to prevent other objects from using the &lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt; operator with the Singleton class.&lt;/li&gt;
+&lt;li&gt;Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field. All following calls to this method return the cached object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your code has access to the Singleton class, then it’s able to call the Singleton’s static method. So whenever that method is called, the same object is always returned.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why not Singleton Pattern&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Violates the Single Responsibility Principle. The pattern solves two problems at the time.&lt;/li&gt;
+&lt;li&gt;The Singleton pattern can mask bad design, for instance, when the components of the program know too much about each other.&lt;/li&gt;
+&lt;li&gt;The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.&lt;/li&gt;
+&lt;li&gt;It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects. Since the constructor of the singleton class is private and overriding static methods is impossible in most languages, you will need to think of a creative way to mock the singleton. Or just don’t write the tests. Or don’t use the Singleton pattern.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * The Singleton class defines the `getInstance` method that lets clients access
+ * the unique singleton instance.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Singleton&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; instance&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Singleton
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * The Singleton&apos;s constructor should always be private to prevent direct
+   * construction calls with the `new` operator.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * The static method that controls the access to the singleton instance.
+   *
+   * This implementation let you subclass the Singleton class while keeping
+   * just one instance of each subclass around.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Singleton &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;Singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      Singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Singleton&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; Singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;instance
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Finally, any singleton should define some business logic, which can be
+   * executed on its instance.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;someBusinessLogic&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * The client code.
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clientCode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; s1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; s2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; s2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Singleton works, both variables contain the same instance.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Singleton failed, variables contain different instances.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;clientCode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Prototype Patterns&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/dae080ccd9f9812ce33b10976715e9fc/6af66/prototype.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADzElEQVQ4y31T3WtbBRz9bXMDHzaHDGR1TvfgXvogKlTBOVrRIRTUF0FX8G3Mom4DZ2vaddh1sx/p2mZJ70fud+69uUmTJrm5N7k3uTfJvUmTNG3F1Lp+J1r2UPygMFD82ohkf8B+L4fzcjjncH7Q43DAZ5cuHzIz5gjNsifdCAKNRgOSutYXV5U3URxtA4CDhmlcUBLqB2MTzpcHb914SkmonXo69emEa+LF8cnbz2sp/SVN14ZgJhwCimVeWd9Y+0dNJE6FI7PgQZHjy8vVXSWhsFkr00BwdGhtbbWUs3OhhKY+jMajdGWhEs8X8oZuaDsROWJbtu1eW19dgrSRhpgca6vVtvZicfmUmclAODLbsrp2d0dLJRfNnNFgBSa2sbFetQvWSkJX/o4p0fml75Yyc6XCqmYk9yLx2R/zBVuv1bZM0HQdEAxrrddr9628fXImPAN23m4pV8q7MTWqzlXs+1LIHyvPl37X0kk9VzD3VF3WLdu6p6WSpdycuaXq8oKZNe/W6zUT3OgdSJtpl5kx/kJwrPVqX8+JlR9WjqXN9O6UxzUiBoVfnZPj/UbG+APB0SlOZDdQAh3VUto9kqECnMCW3KibN0zDrtW3LSBZ6rhl5x5oKe0nkiWFmUjwF5zE2/MF+2cloRBWIcdRHH21ulytZHKZmKopSEJTB4ulopa1shkjm54ORUJDxVLRv7W9aQHtowb8M2JDSSp/ol5se8rjupQv53bKi8WHNMs43eh0Z2+/o6tW3/7eLtixK1992TEyPna+ulxNleZL+Rvf3uz8+lpfZ7FcDG5ubpTBS3vnBYn/beLO1MKwc7S9ORle4qxoPLLjD4rXeckX9GDuwcJcQYrGI2OswMicyHqMjMnHVdnJikyA4khCSSj8wmKlB5J60oeRuNcxcO2dYecoiGLwSVmNpZWkEgaAAxiJnac5uqf7i8+PDA73H2J4+mn/jHCkt99xuP3ds09wInOUE+jD45PjR5tmgBN8TpTALjcJThEQkSOtGOF93x+QPnqjo+NYPCGv5Oxs40L3xWd7+nphVg6Cz8+BY6APzp4706wMKI6AsQnno4cAKSS6xKCABsL+04LEQyDkP81LPkkI8DznZ5/Z3Fw/EZWjF6fcd153Tt4GD+bZj1MYkAwFCD4NGInuay6FZMh9NEcDdH3SdQCnsBcIhvgY9WLvIV70Q17i3mYF5i1e8j1HMEQ7Tnlveimim+VZYHzMfnjcuZDJR+gTuU7e77vuRjyvBcISBGcl+ObW4EFOYM9xItvSjPPfg3+h7cyrj9X7H7NGUQOCbUChAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;prototype&quot;
+        title=&quot;prototype&quot;
+        src=&quot;/blog/static/dae080ccd9f9812ce33b10976715e9fc/f058b/prototype.png&quot;
+        srcset=&quot;/blog/static/dae080ccd9f9812ce33b10976715e9fc/c26ae/prototype.png 158w,
+/blog/static/dae080ccd9f9812ce33b10976715e9fc/6bdcf/prototype.png 315w,
+/blog/static/dae080ccd9f9812ce33b10976715e9fc/f058b/prototype.png 630w,
+/blog/static/dae080ccd9f9812ce33b10976715e9fc/6af66/prototype.png 640w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
